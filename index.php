@@ -35,7 +35,7 @@ require_once("database.php");
       <th>License</th>
     </tr>
     <?php
-    $sql = "SELECT * FROM driver ORDER by name ASC";
+    $sql = "SELECT * FROM driver ORDER by ID ASC";
     $result = $c->query($sql);
     if ($result->num_rows > 0) {
 
@@ -44,8 +44,8 @@ require_once("database.php");
       while ($obj = $result->fetch_assoc()) {
         echo '<tr>';
         echo '<td>' . $obj['id'] . '</td>';
-        echo '<td>' . $obj['name'] . '</td>';
         echo '<td>' . $obj['license'] . '</td>';
+        echo '<td>' . $obj['name'] . '</td>'; 
       }
     } else {
       echo "Empty table.";

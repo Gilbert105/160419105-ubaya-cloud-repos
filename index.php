@@ -31,8 +31,8 @@ require_once("database.php");
   <table>
     <tr>
       <th>ID</th>
-      <th>Name</th>
       <th>License</th>
+      <th>Name</th>
     </tr>
     <?php
     $sql = "SELECT * FROM driver ORDER by ID ASC";
